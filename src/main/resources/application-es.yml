@@ -1,0 +1,14 @@
+#=========================================
+#================= elasticSearch config
+#=========================================
+#es:
+#  ips: 139.224.133.132
+#  port: 9300
+#  cluster: es
+##  plugin=de.spinscale.elasticsearch.plugin.suggest.SuggestPlugin
+
+es:
+  ips: 119.23.160.246
+  port: 9300
+  cluster: elasticsearch
+#  plugin=de.spinscale.elasticsearch.plugin.suggest.SuggestPlugin
