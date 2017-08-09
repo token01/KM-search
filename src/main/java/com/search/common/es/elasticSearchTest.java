@@ -4,6 +4,7 @@ package com.search.common.es;
  * Created by abel-sun on 2017/8/5.
  */
 
+import com.alibaba.fastjson.JSONArray;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -119,6 +120,7 @@ public class elasticSearchTest {
                             try {
                                 String json = queues.poll();
                                 if (json == null) continue;
+//                                JSONArray json = JSONArray.fromObject(str );
 //                                int index1 = json.indexOf("id");
 //                                int index2 = json.indexOf("", index1);
 //                                index1 += 10;
@@ -129,7 +131,7 @@ public class elasticSearchTest {
 //                                String routing = json.substring(index3);
                                 String id = UUID.randomUUID().toString().replaceAll("-", "");
                                 count++;
-                                bulkProcessor.add(new IndexRequest("test", "test").id(id).source(json));
+                                bulkProcessor.add(new IndexRequest("shuju", "test").id(id).source(json));
                             } catch (Exception e) {
                                 System.out.print(e.getMessage());
                             }
